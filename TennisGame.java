@@ -37,6 +37,25 @@ class TennisGame
                     printScores();      
         }
     }
+	
+	boolean checkIfWon()
+    {
+        boolean wins = false;
+        
+        if (playerA >= 3 && (playerA - playerB == 2))
+        {
+            System.out.println("Player A wins");
+            wins = true;
+        }
+        else
+        if (playerB >=3 && (playerB - playerA == 2))
+        {
+            System.out.println("Player B wins");
+            wins = true;
+        }
+        
+        return wins;
+    }
     
 	public static void main (String[] args) throws java.lang.Exception
 	{
