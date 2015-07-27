@@ -17,41 +17,48 @@ class TennisGame
         for (int i = 0; i < scores.length(); i++) {
             if (scores.charAt(i) == 'A') {
                 playerA++;
-            } else if (scores.charAt(i) == 'B') {
+            } 
+		 else if (scores.charAt(i) == 'B') {
                 playerB++;   
             }
-                if(isWinner()) {
-                    playerA = 0;
-                    playerB = 0;
-                } else
+            if(isWinner()) {
+                playerA = 0;
+                playerB = 0;
+            } 
+		 else {
                     printScores();      
-        }
+        	 }
+	  }
     }
 	
 	boolean isWinner() {
-        boolean wins = false;
         
         if (playerA > 3 && (playerA - playerB == 2)){
             System.out.println("1-0");
-            wins = true;
-        } else if (playerB > 3 && (playerB - playerA == 2)) {
+            return true;
+        } 
+        else if (playerB > 3 && (playerB - playerA == 2)) {
             System.out.println("0-1");
-            wins = true;
-          }
+            return true;
+        }
         
-        return wins;
+        return false;
     }
 	
 	void printScores() {
 		if (playerA < 4 && playerB < 4) {
 			System.out.println(scores[playerA] + "-" + scores[playerB]);
-		} else {
-			if (playerA == playerB)
+		} 
+           else {
+			if (playerA == playerB) {
 				System.out.println("40-40");
-			else if (playerA > playerB)
+   			}
+			else if (playerA > playerB) {
 				System.out.println("A-40");
-			else
+			}
+			else {
 				System.out.println("40-A");
+			}
 		}
 	}
 
