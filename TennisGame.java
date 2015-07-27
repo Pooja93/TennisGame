@@ -37,11 +37,11 @@ class TennisGame
 	
 	boolean isWinner() {
         
-        if (playerA > 3 && (playerA - playerB == 2)){
+        if (playerA > 3 && (playerA - playerB >= 2)){
             System.out.println((++setsWonByA) + "-" + setsWonByB);
             return true;
         } 
-        else if (playerB > 3 && (playerB - playerA == 2)) {
+        else if (playerB > 3 && (playerB - playerA >= 2)) {
             System.out.println(setsWonByA + "-" + (++setsWonByB));
             return true;
         }
