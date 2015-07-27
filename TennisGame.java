@@ -6,11 +6,15 @@ class TennisGame
 {
 	int playerA;
 	int playerB;
+	int setsWonByA;
+	int setsWonByB;
 	int[] scores = { 0, 15, 30, 40 };
 	
 	TennisGame() {
 		playerA = 0;
 		playerB = 0;
+		setsWonByA = 0;
+		setsWonByB = 0;
 	}
 	
 	void computeScores(String scores) {
@@ -34,11 +38,11 @@ class TennisGame
 	boolean isWinner() {
         
         if (playerA > 3 && (playerA - playerB == 2)){
-            System.out.println("1-0");
+            System.out.println((++setsWonByA) + "-" + setsWonByB);
             return true;
         } 
         else if (playerB > 3 && (playerB - playerA == 2)) {
-            System.out.println("0-1");
+            System.out.println(setsWonByA + "-" + (++setsWonByB));
             return true;
         }
         
