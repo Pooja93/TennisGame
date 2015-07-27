@@ -6,10 +6,12 @@ class TennisGame
 {
 	int playerA;
 	int playerB;
+	int[] scores;
 	
 	TennisGame() {
 		playerA = 0;
 		playerB = 0;
+		scores = { 0, 15, 30, 40 };
 	}
 	
 	void computeScores(String scores) {
@@ -29,10 +31,6 @@ class TennisGame
         }
     }
 	
-	private void printScores() {
-		System.out.println("printing scores");
-	}
-
 	boolean isWinner() {
         boolean wins = false;
         
@@ -46,6 +44,20 @@ class TennisGame
         
         return wins;
     }
+	
+	void printScores() {
+		if (playerA < 4 && playerB < 4) {
+			System.out.println(scores[playerA] + "-" + scores[playerB]);
+		} else {
+			if (playerA == playerB)
+				System.out.println("40-40");
+			else if (playerA > playerB)
+				System.out.println("A-40");
+			else
+				System.out.println("40-A");
+		}
+	}
+
     
 	public static void main (String[] args) throws java.lang.Exception {
 		Scanner scanner = new Scanner(System.in);
