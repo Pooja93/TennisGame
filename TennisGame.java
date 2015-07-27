@@ -33,10 +33,10 @@ class TennisGame
 	boolean isWinner() {
         boolean wins = false;
         
-        if (playerA >= 3 && (playerA - playerB == 2)){
+        if (playerA > 3 && (playerA - playerB == 2)){
             System.out.println("Player A wins");
             wins = true;
-        } else if (playerB >=3 && (playerB - playerA == 2)) {
+        } else if (playerB > 3 && (playerB - playerA == 2)) {
             System.out.println("Player B wins");
             wins = true;
           }
