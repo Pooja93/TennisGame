@@ -2,9 +2,9 @@
 <p>An application to keep track of the scores during a game of tennis.</p>
 
 <h4>Inputs</h4>
-<ol>
+<ul>
 <li>String of scores</li>
-</ol>
+</ul>
 
 <h4>Approach</h4>
 Keep track of the points scored by each player. When either of the player has scored a minimum of four points and gained a lead of two points against the opponent, he/she is declared the winner.
