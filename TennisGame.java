@@ -6,12 +6,11 @@ class TennisGame
 {
 	int playerA;
 	int playerB;
-	int[] scores;
+	int[] scores = { 0, 15, 30, 40 };
 	
 	TennisGame() {
 		playerA = 0;
 		playerB = 0;
-		scores = { 0, 15, 30, 40 };
 	}
 	
 	void computeScores(String scores) {
