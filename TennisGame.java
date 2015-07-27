@@ -20,7 +20,7 @@ class TennisGame
             } else if (scores.charAt(i) == 'B') {
                 playerB++;   
             }
-            wins = checkIfWon();
+            wins = isWinner();
                 if(wins) {
                     playerA = 0;
                     playerB = 0;
@@ -33,7 +33,7 @@ class TennisGame
 		System.out.println("printing scores");
 	}
 
-	boolean checkIfWon() {
+	boolean isWinner() {
         boolean wins = false;
         
         if (playerA >= 3 && (playerA - playerB == 2)){
