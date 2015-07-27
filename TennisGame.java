@@ -14,15 +14,13 @@ class TennisGame
 	}
 	
 	void computeScores(String scores) {
-        boolean wins = false;
         for (int i = 0; i < scores.length(); i++) {
             if (scores.charAt(i) == 'A') {
                 playerA++;
             } else if (scores.charAt(i) == 'B') {
                 playerB++;   
             }
-            wins = isWinner();
-                if(wins) {
+                if(isWinner()) {
                     playerA = 0;
                     playerB = 0;
                 } else
